@@ -1,0 +1,33 @@
+<h3>Welkom {{employee.firstName}}</h3>
+<form>
+  <div class="form-row">
+    <div class="form-group col-md-6">
+      <label>First Name:</label>
+      <input type="text" class="form-control" placeholder="{{employee.firstName}}" readonly>
+    </div>
+    <div class="form-group col-md-6">
+      <label>Last Name</label>
+      <input type="text" class="form-control" placeholder="{{employee.lastName}}" readonly>
+    </div>
+  </div>
+
+  <div class="form-row">
+    <div class="form-group col-md-4">
+      <label>Email:</label>
+      <input type="text" class="form-control" placeholder="{{employee.email}}" readonly>
+    </div>
+
+    <div class="form-group col-md-4">
+      <label>Phonenumber:</label>
+      <input type="text" class="form-control" placeholder="{{employee.phonenumber}}" readonly>
+    </div>
+
+    <div class="form-group col-md-4">
+      <label>Hiring date:</label>
+      <input type="text" class="form-control" placeholder="{{employee.hireDate}}" readonly>
+    </div>
+
+  </div>
+
+  <button class="btn btn-light" (click)="goBack()">Back</button>
+</form>
