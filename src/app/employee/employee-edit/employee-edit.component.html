@@ -1,0 +1,33 @@
+<h3>Edit medewerker {{employee.id}}</h3>
+
+<form (ngSubmit)="onSubmit()">
+  <div class="form-row">
+    <div class="form-group col-md-6">
+      <label>First Name:</label>
+      <input type="text" class="form-control" placeholder="{{employee.firstName}}" name="firstName" [(ngModel)]="employee.firstName">
+    </div>
+    <div class="form-group col-md-6">
+      <label>Last Name</label>
+      <input type="text" class="form-control" placeholder="{{employee.lastName}}" name="lastName" [(ngModel)]="employee.lastName">
+    </div>
+  </div>
+
+  <div class="form-row">
+    <div class="form-group col-md-4">
+      <label>Email:</label>
+      <input type="email" class="form-control" placeholder="{{employee.email}}" name="email" [(ngModel)]="employee.email">
+    </div>
+
+    <div class="form-group col-md-4">
+      <label>Phonenumber:</label>
+      <input type="text" class="form-control" placeholder="{{employee.phonenumber}}" name="phonenumber" [(ngModel)]="employee.phonenumber">
+    </div>
+
+    <div class="form-group col-md-4">
+      <label>Hiring date:</label>
+      <input type="date" class="form-control" [value]="datePipe.transform(this.employee.hireDate,'yyyy-MM-dd')" name="hireDate" readonly>
+    </div>
+  </div>
+  <button type="submit" class="btn btn-primary">Submit</button>
+  <button class="btn btn-light" (click)="goBack()">Back</button>
+</form>
