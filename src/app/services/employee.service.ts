@@ -30,5 +30,4 @@ export class EmployeeService {
     return this.http.put<Employee>(`${this.baseUrl}/${id}`, employee);
   }
 
-
 }
