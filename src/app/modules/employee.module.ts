@@ -6,6 +6,7 @@ import {NgModule} from "@angular/core";
 import {EmployeeListComponent} from "../employee/employee-list/employee-list.component";
 import {EmployeeEditComponent} from "../employee/employee-edit/employee-edit.component";
 import {FormsModule} from "@angular/forms";
+import { ReactiveFormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -17,6 +18,7 @@ import {FormsModule} from "@angular/forms";
   imports: [
     CommonModule,
     FormsModule,
+    ReactiveFormsModule,
     RouterModule.forChild([
       {path: 'employees', component: EmployeeListComponent},
       {path: 'employee/:id', component: EmployeeDetailComponent},
